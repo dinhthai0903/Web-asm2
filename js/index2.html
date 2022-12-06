@@ -1,51 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body style="margin-left: 2rem">
+
+<body>
     <style>
-        button{
+        button {
             background-color: green;
         }
-        button>a{
-            color:White;
+        
+        button>a {
+            color: White;
         }
+        
+        body {
+            margin: 100px 500px;
+            color: red;
+        }
+        
+        fieldset {
+            background-color: aqua;
+            border-radius: 15px;
+        }
+        
+        legend {}
     </style>
+    <legend>
+        ĐĂNG KÝ ---->>
+    </legend>
     <fieldset>
-        <legend>ĐĂNG KÝ </legend> 
-    <div>
-        Full Name:
-        <input type="text" aria-placeholder="Ho va ten" placeholder="Nhập fullname">
-    </div>
-    <br>
-    <div>
-        User Name:
-        <input type="text" name="name" placeholder="Nhập tên">
-    </div>
-    <br>
-    <div>
-        Password:
-        <input type="password" placeholder="Nhập mật khẩu">
-    </div>
-    <br>
-    <div>
-        Nhập lại Password:
-        <input type="password" placeholder="Nhập lại mật khẩu">
-    </div>
-    <br>
-    <div>
-        Gender:
-        <label><input type="radio" name="gender" id="">Male</label>
-        <label><input type="radio" name="gender" id="">Female</label>
-    </div>
-    <br>
-    <div>
-        Birtday:
-        <select>
+
+        <div>
+            Full Name:
+            <input type="text" aria-placeholder="Ho va ten" placeholder="Nhập fullname">
+        </div>
+        <br>
+        <div>
+            User Name:
+            <input type="text" name="name" placeholder="Nhập tên">
+        </div>
+        <br>
+        <div>
+            Password:
+            <input type="password" placeholder="Nhập mật khẩu">
+        </div>
+        <br>
+        <div>
+            Nhập lại Password:
+            <input type="password" placeholder="Nhập lại mật khẩu">
+        </div>
+        <br>
+        <div>
+            Gender:
+            <label><input type="radio" name="gender" id="">Male</label>
+            <label><input type="radio" name="gender" id="">Female</label>
+        </div>
+        <br>
+        <div>
+            Birtday:
+            <select>
             <option value="">Ngay 1</option>
             <option value="">Ngay 2</option>
             <option value="">Ngay 3</option>
@@ -78,7 +96,7 @@
             <option value="">Ngay 30</option>
             <!-- <option value="">Ngay 1</option> -->
         </select>
-        <select>
+            <select>
             <option value="">Thang 1</option>
             <option value="">Thang 2</option>
             <option value="">Thang 3</option>
@@ -92,7 +110,7 @@
             <option value="">Thang 11</option>
             <option value="">Thang 12</option>
         </select>
-        <select>
+            <select>
             <option value="">Nam 2015</option>
             <option value="">Nam 2016</option>
             <option value="">Nam 2017</option>
@@ -106,33 +124,34 @@
             <option value="">Nam 2025</option>
             <option value="">Nam 2026</option>
         </select>
-        <!-- <input type="date" name="birtday" id=""> -->
-        <!-- <input type="month"> -->
-    </div>
-    <br>
-    <div>
-        Địa chỉ:
-        <textarea name="" id="" cols="30" rows="5"></textarea>
-    </div>
-    <br>
-    <div>
-        Avatar:
-        <input type="file">
-    </div>
-    <br>
-    <div>
-        Hobbies:
-        <label><input type="checkbox" name="hobbie" id="">Travelling</label>
-        <label for=""><input type="checkbox" name="hobbie" id="">Music</label>
-        <label for=""><input type="checkbox" name="hobbie" id="">Sports</label>
-        <label for=""><input type="checkbox" name="hobbie" id="">Other</label>
-    </div>
-    <hr>
-    <div>
-        <button><a href="./index3.html">OK</a></button>
-        <button><a href="./index2.html">Reset</a></button>
-        <button><a href="../index.html">Back</a></button>
-    </div>
+            <!-- <input type="date" name="birtday" id=""> -->
+            <!-- <input type="month"> -->
+        </div>
+        <br>
+        <div>
+            Địa chỉ:
+            <textarea name="" id="" cols="30" rows="5"></textarea>
+        </div>
+        <br>
+        <div>
+            Avatar:
+            <input type="file">
+        </div>
+        <br>
+        <div>
+            Hobbies:
+            <label><input type="checkbox" name="hobbie" id="">Travelling</label>
+            <label for=""><input type="checkbox" name="hobbie" id="">Music</label>
+            <label for=""><input type="checkbox" name="hobbie" id="">Sports</label>
+            <label for=""><input type="checkbox" name="hobbie" id="">Other</label>
+        </div>
+        <hr>
+        <div style="">
+            <button><a href="./index3.html">OK</a></button>
+            <button><a href="./index2.html">Reset</a></button>
+            <button><a href="../index.html">Back</a></button>
+        </div>
     </fieldset>
 </body>
+
 </html>

@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+
+<body>
+    <style>
+        .body{
+            height: auto;
+        }
+        .content-col-25 {
+            width: 150%;
+            float: left;
+        }
+        
+        .content-prod {
+            border-radius: 10px;
+            box-shadow: 0 0 5px gray;
+            margin: 5px;
+            padding: 5px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .content-image {
+            max-width: 100%;
+            height: 300px;
+            margin-bottom: 10px;
+        }
+        
+        .content-icons {
+            position: absolute;
+            right: 5px;
+            bottom: 5px;
+            width: 30px;
+        }
+        
+
+        
+        .content-icons>img {
+            width: 30px;
+        }
+        
+        .content-new-icon {
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            width: 60px;
+        }
+        
+        button {
+            border-radius: 10px;
+            box-shadow: 0 0 5px gray;
+            font-variant: small-caps;
+        }
+        .content-name {
+            font-variant: small-caps;
+            font-size: 25px;
+        }
+        .content-evaluate{
+        text-align: left;
+        color: black;
+        }
+        .content-evaluate-icon:hover{
+            color: yellow;
+        }
+        .content-price {
+            left: 5px;
+            bottom: 5px;
+            font-family: Impact;
+            font-size: 15px;
+            font-variant: small-caps;
+        }
+        
+        .VYmrqq>label {
+            font-size: 20px;
+            font-variant: small-caps;
+            color: rgba(0, 0, 0, .4);
+            font-size: .875rem;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            width: 8.75rem;
+            padding-right: 0.75rem;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        
+        p {
+            background: rgba(0, 0, 0, .02);
+            color: rgba(0, 0, 0, .87);
+            font-size: 1.125rem;
+            padding: 0.875rem;
+            text-transform: capitalize;
+        }
+        
+        .O86G4Z {
+            display: flex;
+            align-items: center;
+        }
+        
+        .label {
+            color: #757575;
+            width: 150px;
+            text-transform: capitalize;
+            flex-shrink: 0;
+        }
+        
+        .menu {
+            display: flex;
+            list-style: none;
+        }
+        
+        .menu>li {
+            position: relative;
+        }
+        
+        .menu>li>a {
+            display: block;
+            padding: 1px 50px;
+            text-decoration: none;
+            font-variant: small-caps;
+            color: orangered;
+        }
+        
+        .menu>li>a:hover {
+            color: black;
+            font-weight: bolder;
+        }
+        
+        .sub-menu {
+            margin: 0;
+            /* top: -5px; */
+            position: absolute;
+            list-style: none;
+            border-radius: 5px;
+            /* box-shadow: 0 0 5px yellow; */
+            width: 200px;
+            background-color: yellow;
+            display: none;
+            z-index: 1;
+        }
+        
+        .sub-menu>li>a {
+            line-height: 30px;
+            border: 2px solid yellow;
+            text-decoration: none;
+            font-variant: small-caps;
+            color: orangered;
+            padding-left: 0px;
+        }
+        
+        .sub-menu>li>a:hover {
+            font-weight: bolder;
+            color: brown;
+        }
+        
+        .menu>li:hover>.sub-menu {
+            display: block;
+        }
+        
+        .share>li {
+            list-style: none;
+            text-decoration: none;
+        }
+        
+        .share {
+            display: flex;
+        }
+        
+        .Ques {
+            list-style: none;
+        }
+        
+        .Ques>li>a {
+            text-decoration: none;
+            color: black;
+        }
+        .col-25 {
+        width: 20%;
+        float: left;
+        top: 0;
+        }
+        
+        .prod {
+            border-radius: 10px;
+            box-shadow: 0 0 5px gray;
+            margin: 5px;
+            padding: 5px;
+            text-align: center;
+            position: relative;
+            /* height: 350px; */
+        }
+        
+        .image {
+            max-width: 100%;
+            height: 200px;
+            margin-bottom: 10px;
+        }
+        
+        .icon{
+            right: 5px;
+            cursor: pointer;
+            bottom: 5px;
+            position: absolute;
+        }
+        .icon>a{
+            color: orangered;
+        }
+        .prod>a {
+            background: url('../src/783327b8bf40b7429800080023231926.mp4');
+        }
+        
+        
+        .new-icon {
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            width: 60px;
+        }
+        
+        button {
+            border-radius: 10px;
+            box-shadow: 0 0 5px gray;
+            font-variant: small-caps;
+        }
+        
+        .name {
+            font-variant: small-caps;
+            font-size: 15px;
+            text-align: left;
+            cursor: pointer;
+            font-variant: small-caps;
+            color: black;
+        }
+        .evaluate{
+            text-align: left;
+            color: black;
+        }
+        .evaluate-icon{
+            color: yellow;
+        }
+        .kind{
+            font-variant: small-caps;
+            font-size: 15px;
+            text-align: left;
+            cursor: pointer;
+            font-variant: small-caps;
+            color: black;
+        }
+        .price {
+            left: 5px;
+            bottom: 5px;
+            font-size: 15px;
+            font-variant: small-caps;
+            text-align: left;
+            color: orangered;
+            position: absolute;
+        }
+        footer {
+        height: auto;
+        background-color: aliceblue;
+        clear: both;
+        }    .Footer {
+            display: flex;
+            justify-content: space-around;
+            justify-items: center;
+        }
+        
+        .son>li {
+            list-style: none;
+        }
+        
+        .son>li>a {
+            text-decoration: none;
+        }
+        
+        .son>li>a:hover {
+            color: green;
+            font-weight: bolder;
+        }
+    </style>
+    
+    <div class="body">
+        <div>
+            <div class="content" style="display: flex">
+                <div>
+                    <div class="content-col-25">
+                        <div class="content-prod">
+                            <a href="logo"><img class="content-image" src="../src/286885732.jpeg"></a>
+                            <img class="content-new-icon" src="../src/tải xuống (2).png">
+                        </div>
+                    </div>
+                </div>
+                <div class="" style="margin-top: 1cm; margin-left: 5cm;">
+                    <div class="content-name">【FLASH SALE】i13 Pro max 512GB cheap android phone 7.5 inch high definition screen 5G Original Smartphone</div>
+                    <div class="content-evaluate">
+                        <span>Evaluate</span>    
+                        <a href="">
+                            <i class="evaluate-icon fa-solid fa-star"></i>
+                            <i class="evaluate-icon fa-solid fa-star"></i>
+                            <i class="evaluate-icon fa-solid fa-star"></i>
+                            <i class="evaluate-icon fa-solid fa-star"></i>
+                            <i class="evaluate-icons fa-solid fa-star"></i>
+                        </a>
+                    </div>
+                    <div class="content-price"><br>
+                        <span>28,999,999₫</span> <del>31,999,999₫</del>
+                    </div>
+                    <br>
+                    <div class="O86G4Z">
+                        <div class="label">Shop discount code</div>
+                        <div class="menu">
+                            <li><a href="">Reduce ₫70k</a>
+                                <ul class="sub-menu ">
+                                    <li>
+                                        <a href=" ">Reduce ₫70k </a>
+                                        <a href=""><i class="fa-solid fa-cart-plus"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href=" ">Reduce ₫35k</a>
+                                        <a href=""><i class="fa-solid fa-cart-plus"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href=" ">Reduce ₫17k</a>
+                                        <a href=""><i class="fa-solid fa-cart-plus"></i></a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="">Reduce ₫35k</a>
+                            </li>
+                            <li>
+                                <a href="">Reduce ₫17k</a>
+                            </li>
+
+                        </div>
+                    </div>
+                    <br>
+                    <label for="" style="font-weight: bolder; ">Color:</label>
+                    <select style="font-weight: bolder; ">
+                        <option value=" " style="color: red ">Red</option>
+                        <option value=" " style="color: gold ">Gold</option>
+                        <option value=" " style="color: skyblue ">Blue sky</option>
+                        <option value=" " style="color: purple ">Puzple</option>
+                        <option value=" " style="color: silver ">Silver</option>
+                    </select>
+                    <br>
+                    <br>
+                    <label for="" style="font-weight: bolder; ">Amount:</label>
+                    <input name="id " type="text " style="font-weight: bolder; " placeholder="Number ">
+                    <br>
+                    <br>
+                    <a href=" " style="text-decoration: none; "></a>
+                </div>
+            </div>
+            <div style="margin-left: 2cm;display: flex; " class="button ">
+                <div class="share ">
+                    <li>
+                        <a href="https://www.facebook.com/profile.php?id=100012221206023 "><i class="fa-brands fa-facebook "></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.messenger.com/archived/t/100012221206023 "><i class="fa-brands fa-facebook-messenger "></i></a>
+                    </li>
+                    <li>
+                        <a href=" "><i class="fa-brands fa-pinterest-p "></i></a>
+                    </li>
+                    <li>
+                        <a href=" "><i class="fa-brands fa-twitter "></i></a>
+                    </li>
+                </div>
+                <div style="margin-left: 0.5cm ">
+                    <button><a href="" style="text-decoration: none; ">Add to cart</a></button>
+                    <button><a href="" style="text-decoration: none; ">Place an order</a></button>
+                </div>
+            </div>
+        </div>
+    
+        <hr>
+        <div class="product ">
+            <p>PRODUCT DETAILS</p>
+            <div class="VYmrqq "><label class="zgeHL- ">Storage capacity: </label>12GB
+            </div>
+            <div class="VYmrqq "><label class="zgeHL- ">Warranty Type: </label>Supplier Warranty
+            </div>
+            <div class="VYmrqq "><label class="zgeHL- ">Warranty period: </label>1 month
+            </div>
+            <div class="VYmrqq "><label class="zgeHL- ">Number of sim slots: </label>2
+            </div>
+            <div class="VYmrqq "><label class="zgeHL- ">Main camera number: </label>3
+            </div>
+            <div class="VYmrqq "><label class="zgeHL- ">Phone features: </label>External storage, GPS, Touchscreen, Wifi
+            </div>
+            <div class="VYmrqq "><label class="zgeHL- ">Phone type: </label> Smartphone
+            </div>
+            <div class="VYmrqq "><label class="zgeHL- ">Mobile phone:</label> LTE
+            </div>
+            <div class="VYmrqq "><label class="zgeHL- ">Sim type: </label>Microphone, Standard
+            </div>
+            <div class="VYmrqq "><label class="zgeHL- ">RAM: </label>12GB
+            </div>
+            <div class="VYmrqq "><label class="zgeHL- ">Main camera resolution: </label>58MP
+            </div>
+            <div class="VYmrqq "><label class="zgeHL- ">Battery capacity: </label>
+            </div>
+            <div class="VYmrqq "><label class="zgeHL- ">Phone model: </label>i13 Pro Max
+            </div>
+            <div class="VYmrqq "><label class="zgeHL- ">Status: </label>New
+            </div>
+            <div class="VYmrqq "><label class="zgeHL- ">Screen size: </label>7.5inches
+            </div>
+            <div class="VYmrqq "><label class="zgeHL- ">ROM: </label>512G
+            </div>
+            <div class="VYmrqq "><label class="zgeHL- ">Number of promotional items: </label> 360
+            </div>
+            <div class="VYmrqq "><label class="zgeHL- ">Number of products remaining: </label>5618
+            </div>
+            <div class="VYmrqq "><label class="zgeHL- ">Send from: </label>Yen Phong District, Bac Ninh
+            </div>
+        </div>
+        <hr>
+        <div class="product ">
+            <p>PRODUCT DESCRIPTION</p>
+            <h3>Clarification:</h3>
+            <div class="VYmrqq "><label class="zgeHL- ">Model: </label>i13 Pro Max
+            </div>
+            <div class="VYmrqq "><label class="zgeHL- ">Platform: </label>Android 11.0 3G/4G/5G LTE
+            </div>
+            <div class="VYmrqq "><label class="zgeHL- ">Standby: </label>dual backup TF card expansion
+            </div>
+            <div class="VYmrqq "><label class="zgeHL- ">Color: </label>black, blue, yellow, white
+            </div>
+            <div class="VYmrqq "><label class="zgeHL- ">Memory:  </label>12GB + 512GB
+            </div>
+            <div class="VYmrqq "><label class="zgeHL- ">Screen:  </label>7.5 inch high definition screen
+            </div>
+            <div class="VYmrqq "><label class="zgeHL- ">Camera:  </label>24MP front camera + 58M . high definition rear camera
+            </div>
+            <div class="VYmrqq "><label class="zgeHL- ">Frequency: </label>GSM: 800/900/1800/1900, WCDMA: 850/2100
+            </div>
+            <div class="VYmrqq "><label class="zgeHL- ">Multi-function:  </label>face recognition, single SIM Wifi, GPS, gravity sensor, alarm clock, calendar, calculator, voice recorder, video camera, WAP/MMS/GPRS/, photo viewer, book electronics, world clock, rear flash task
+                card, back cover IML enabled
+            </div>
+        </div>
+        <br>
+        <div class="Ques">
+            <li>
+                <a href=""><i class="fa-solid fa-question"></i> Q: Do you have stock?</a>
+            </li>
+            <li>
+                <a href="">A: Yes. It is available.</a>
+            </li><br>
+            <li>
+                <a href=""><i class="fa-solid fa-question"></i> Q: When can I receive the goods?</a>
+            </li>
+            <li>
+                <a href="">A: We will ship within 24 hours after receiving the order. It can arrive in about 1-3 days.</a>
+            </li><br>
+            <li>
+                <a href=""><i class="fa-solid fa-question"></i> Q: Support money transfer (COD)?</a>
+            </li>
+            <li>
+                <a href="">A: Yes, we support cash transfer.</a>
+            </li><br>
+            <li>
+                <a href=""><i class="fa-solid fa-question"></i> Q: Is this the real price?</a>
+            </li>
+            <li>
+                <a href="">A: Yes, this is the final price. You can also request alternative login information</a>
+            </li>
+        </div>
+        <br>
+        <div class="Ques">
+            <li>
+                <a href=""><i class="fa-solid fa-gift"></i> Awards</a>
+            </li>
+            <li>
+                <a href="">1 x Charger Adapter</a>
+            </li>
+            <li>
+                <a href="">1 x charging cable</a>
+            </li>
+            <li>
+                <a href="">1 x headset</a>
+            </li>
+            <li>
+                <a href="">1 x User Manual</a>
+            </li>
+            <li>
+                <a href="">1 x phone case</a>
+            </li>
+            <li>
+                <a href="">1 x protective film</a>
+            </li>
+        </div>
+        <div class="col-25">
+            <div class="prod">
+                <a href="logo"><img class="image" src="../src/1992615027.jpeg"></a>
+                <img class="new-icon" src="../src/tải xuống (2).png">
+                    <div claa="subject">
+                        <div class="name">
+                            【FLASH SALE】i13 Pro max 512GB cheap android phone 7.5 inch high definition screen 5G Original Smartphone
+                        </div>
+                        <br>
+                        <div class="kind">
+                            <span class="kind-item">
+                                Product classification: Red
+                            </span>
+                        </div>
+                        <br>
+                        <div class="price">
+                            <span>28,999,999₫</span> <del>31,999,999₫</del>
+                        </div>
+                        <div class="icon">
+                            <a href=""><i class="fa-solid fa-cart-plus"></i></a>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        <div class="col-25">
+                <div class="prod">
+                    <a href="logo"><img class="image" src="../src/2132584444.jpeg"></a>
+                    <img class="new-icon" src="../src/tải xuống (2).png">
+                        <div claa="subject">
+                            <div class="name">
+                                【FLASH SALE】i13 Pro max 512GB cheap android phone 7.5 inch high definition screen 5G Original Smartphone
+                            </div>
+                                <br>
+                                <div class="kind">
+                                    <span class="kind-item">
+                                        Product classification: Green
+                                    </span>
+                                </div>
+                                <br>
+                            <div class="price">
+                                <span>28,999,999₫</span> <del>31,999,999₫</del>
+                            </div>
+                            <div class="icon">
+                                <a href=""><i class="fa-solid fa-cart-plus"></i></a>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        <div class="col-25">
+                <div class="prod">
+                    <a href="logo"><img class="image" src="../src/286885732.jpeg"></a>
+                    <img class="new-icon" src="../src/tải xuống (2).png">
+                        <div claa="subject">
+                            <div class="name">
+                                【FLASH SALE】i13 Pro max 512GB cheap android phone 7.5 inch high definition screen 5G Original Smartphone
+                            </div>
+                                <br>
+                                <div class="kind">
+                                    <span class="kind-item">
+                                        Product classification: Black
+                                    </span>
+                                </div>
+                                <br>
+                            <div class="price">
+                                <span>28,999,999₫</span> <del>31,999,999₫</del>
+                            </div>
+                            <div class="icon">
+                                <a href=""><i class="fa-solid fa-cart-plus"></i></a>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        <div class="col-25">
+                <div class="prod">
+                    <a href="logo"><img class="image" src="../src/1992615027.jpeg"></a>
+                    <img class="new-icon" src="../src/tải xuống (2).png">
+                        <div claa="subject">
+                            <div class="name">
+                                【FLASH SALE】i13 Pro max 512GB cheap android phone 7.5 inch high definition screen 5G Original Smartphone
+                            </div>
+                                <br>
+                                <div class="kind">
+                                    <span class="kind-item">
+                                        Product classification: Red
+                                    </span>
+                                </div>
+                                <br>
+                            <div class="price">
+                                <span>28,999,999₫</span> <del>31,999,999₫</del>
+                            </div>
+                            <div class="icon">
+                                <a href=""><i class="fa-solid fa-cart-plus"></i></a>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        <div class="col-25">
+                <div class="prod">
+                    <a href="logo"><img class="image" src="../src/2132584444.jpeg"></a>
+                    <img class="new-icon" src="../src/tải xuống (2).png">
+                        <div claa="subject">
+                            <div class="name">
+                                【FLASH SALE】i13 Pro max 512GB cheap android phone 7.5 inch high definition screen 5G Original Smartphone
+                            </div>
+                                <br>
+                                <div class="kind">
+                                    <span class="kind-item">
+                                        Product classification: Green
+                                    </span>
+                                </div>
+                                <br>
+                            <div class="price">
+                                <span>28,999,999₫</span> <del>31,999,999₫</del>
+                            </div>
+                            <div class="icon">
+                                <a href=""><i class="fa-solid fa-cart-plus"></i></a>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        <div class="col-25">
+                <div class="prod">
+                    <a href="logo"><img class="image" src="../src/Dell-XPS-15-1024x572.jpg"></a>
+                    <img class="new-icon" src="../src/tải xuống (2).png">
+                        <div claa="subject">
+                            <div class="name">
+                                【(100% NEW) Dell Inspiron 5405, Luxurious and Smooth Office Laptop (Ryzen R5-4500U, AMD Vega 6 VGA, 14 FullHD IPS Screen)
+                            </div>
+                                <br>
+                                <div class="kind">
+                                    <span class="kind-item">
+                                        Product classification: Silver
+                                    </span>
+                                </div>
+                                <br>
+                            <div class="price">
+                                <span>18,999,999₫</span> <del>20,999,999₫</del>
+                            </div>
+                            <div class="icon">
+                                <a href=""><i class="fa-solid fa-cart-plus"></i></a>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        <div class="col-25">
+                <div class="prod">
+                    <a href="logo"><img class="image" src="../src/laptop-tot-nhat-cho-chinh-sua-video1.jpg"></a>
+                    <img class="new-icon" src="../src/tải xuống (2).png">
+                        <div claa="subject">
+                            <div class="name">
+                                [Code ELBAU4 4% off single 500K] Dell VOS14 Laptop 3400 i5-1135G7.8GD4,512SSD,14.0"FHD, 2GD5_MX330 (YX51W6)
+                            </div>
+                                <br>
+                                <div class="kind">
+                                    <span class="kind-item">
+                                        Product classification: Silver
+                                    </span>
+                                </div>
+                                <br>
+                            <div class="price">
+                                <span>18,999,999₫</span> <del>20,999,999₫</del>
+                            </div>
+                            <div class="icon">
+                                <a href=""><i class="fa-solid fa-cart-plus"></i></a>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        <div class="col-25">
+                <div class="prod">
+                    <a href="logo"><img class="image" src="../src/may-delll.jpg"></a>
+                    <img class="new-icon" src="../src/tải xuống (2).png">
+                        <div claa="subject">
+                            <div class="name">
+                                【(100% NEW) Dell Inspiron 5405, Luxurious and Smooth Office Laptop (Ryzen R5-4500U, AMD Vega 6 VGA, 14 FullHD IPS Screen)
+                            </div>
+                                <br>
+                                <div class="kind">
+                                    <span class="kind-item">
+                                        Product classification: Silver
+                                    </span>
+                                </div>
+                                <br>
+                            <div class="price">
+                                <span>18,999,999₫</span> <del>20,999,999₫</del>
+                            </div>
+                            <div class="icon">
+                                <a href=""><i class="fa-solid fa-cart-plus"></i></a>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        <div class="col-25">
+                <div class="prod">
+                    <a href="logo"><img class="image" src="../src/Laptop-cu-cau-hinh-cao-2.jpg"></a>
+                    <img class="new-icon" src="../src/tải xuống (2).png">
+                        <div claa="subject">
+                            <div class="name">
+                                [100% Brand New] Dell Inspiron 5420 Slim Laptop {Core i7-1260P, VGA MX570-2G, 14" 2.2K IPS Monitor, 100% sRGB, 300Nits}
+                            </div>
+                                <br>
+                                <div class="kind">
+                                    <span class="kind-item">
+                                        Product classification: Silver
+                                    </span>
+                                </div>
+                                <br>
+                            <div class="price">
+                                <span>18,999,999₫</span> <del>20,999,999₫</del>
+                            </div>
+                            <div class="icon">
+                                <a href=""><i class="fa-solid fa-cart-plus"></i></a>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        <div class="col-25">
+                <div class="prod">
+                    <a href="logo"><img class="image" src="../src/sg-11134201-22100-ofeqjv0rk5ivf8.jpg"></a>
+                    <img class="new-icon" src="../src/tải xuống (2).png">
+                        <div claa="subject">
+                            <div class="name">
+                                (100% NEW) Dell Inspiron 5405, Luxury and Smooth Office Laptop (Ryzen R5-4500U, AMD Vega 6 VGA, 14 FullHD IPS Screen)
+                            </div>
+                                <br>
+                                <div class="evaluate">
+                                    <span>Evaluate</span>    
+                                    <i class="evaluate-icon fa-regular fa-star"></i>
+                                    <i class="evaluate-icon fa-regular fa-star"></i>
+                                    <i class="evaluate-icon fa-regular fa-star"></i>
+                                    <i class="evaluate-icon fa-regular fa-star"></i>
+                                    <i class="evaluate-icon fa-regular fa-star"></i>
+                                </div>
+                                <br>
+                                <div class="kind">
+                                    <span class="kind-item">
+                                        Product classification: Silver
+                                    </span>
+                                </div>
+                                <br>
+                            <div class="price">
+                                <span>18,999,999₫</span> <del>20,999,999₫</del>
+                            </div>
+                            <div class="icon">
+                                <a href=""><i class="fa-solid fa-cart-plus"></i></a>
+                            </div>
+                        </div>
+                </div>
+            </div>
+    </div>
+    <footer>
+        <div class="Footer">
+            <div class="Footer-son">
+                <ul class="son">
+                    <li><a href="">The company's governing body TNHH DMX.</a></li>
+                    <li><a href="">Location: 197/12b Thai Thi Boi, Thanh Khe, Đa Nang.</a></li>
+                    <li><a href="">Number Phone: 0769466545.</a></li>
+                </ul>
+            </div>
+            <div class="Footer-son">
+                <ul class="son">
+                    <li><a href="./js/index8.html">About We</a></li>
+                    <li><a href="./js/index13.html">Recruit</a></li>
+                </ul>
+            </div>
+            <div class="Footer-son">
+                <ul class="son">
+                    <li><a href="">Terms of use</a></li>
+                    <li><a href="">Privacy Policy</a></li>
+                    <li><a href="">Make an advertisement</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</html>
+</body>
+
+</html>
